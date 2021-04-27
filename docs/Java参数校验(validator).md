@@ -8,7 +8,7 @@ javax.validation的一系列注解可以帮我们完成参数校验,免去繁琐
 
 JSR303 是一套JavaBean参数校验的标准，它定义了很多常用的校验注解，我们可以直接将这些注解加在我们JavaBean的属性上面(面向注解编程的时代)，就可以在需要校验的时候进行校验了,在SpringBoot中已经包含在starter-web中,再其他项目中可以引用依赖,并自行调整版本:
 
-```
+```java
 <!--jsr 303-->
 <dependency>
     <groupId>javax.validation</groupId>
@@ -29,7 +29,7 @@ JSR303 是一套JavaBean参数校验的标准，它定义了很多常用的校�
 
 这里我们在控制器层进行注解声明
 
-```
+```java
  /**
      * 走参数校验注解
      *
