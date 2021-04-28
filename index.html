@@ -9,7 +9,9 @@
   <meta name="description" content="互联网 Java 工程师进阶知识完全扫盲，项目维护者：杨立滨" />
   <meta name="viewport"
     content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css" />
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css" title="vue"/>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/buble.css" title="buble" disabled />
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/dark.css" title="dark" disabled />
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/style.min.css">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
@@ -42,9 +44,29 @@
           <li><a href="#/docs/extra-page/offer">Offer</a></li>
         </ul>
       </li>
+      <li>
+        主题
+        <ul class="demo-theme-preview">
+          <li><a data-theme="vue">vue</a></li>
+          <li><a data-theme="buble">buble</a></li>
+          <li><a data-theme="dark">dark</a></li>
+        </ul>
+      </li>
     </ul>
   </nav>
   <div id="app">本系列知识由 Doocs 开源社区总结发布</div>
+  <script>
+  var preview = Docsify.dom.find('.demo-theme-preview');
+  var themes = Docsify.dom.findAll('[rel="stylesheet"]');
+
+  preview.onclick = function (e) {
+    var title = e.target.getAttribute('data-theme')
+
+    themes.forEach(function (theme) {
+      theme.disabled = theme.title !== title
+    });
+  };
+ </script>
   <script>
     window.$docsify = {
       name: "advanced-java",
