@@ -53,19 +53,26 @@
         </ul>
       </li>
     </ul>
+  <h4>点击切换主题</h4>
+      <div class="demo-theme-preview">
+        <a data-theme="vue">vue.css</a>
+        <a data-theme="buble">buble.css</a>
+        <a data-theme="dark">dark.css</a>
+      </div>
   </nav>
+
   <div id="app">本系列知识由 Doocs 开源社区总结发布</div>
   <script>
-   function change(
   var preview = Docsify.dom.find('.demo-theme-preview');
   var themes = Docsify.dom.findAll('[rel="stylesheet"]');
 
+  preview.onclick = function (e) {
     var title = e.target.getAttribute('data-theme')
 
     themes.forEach(function (theme) {
       theme.disabled = theme.title !== title
     });
-  )
+  };
  </script>
   <script>
     window.$docsify = {
