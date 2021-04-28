@@ -44,17 +44,15 @@
           <li><a href="#/docs/extra-page/offer">Offer</a></li>
         </ul>
       </li>
-      <li>
-        主题
-        <ul class="demo-theme-preview">
-          <li><a data-theme="vue">vue</a></li>
-          <li><a data-theme="buble">buble</a></li>
-          <li><a data-theme="dark">dark</a></li>
-        </ul>
-      </li>
     </ul>
   </nav>
   <div id="app">本系列知识由 Doocs 开源社区总结发布</div>
+  <h4>点击切换主题</h4>
+  <div class="demo-theme-preview">
+    <a data-theme="vue">vue.css</a>
+    <a data-theme="buble">buble.css</a>
+    <a data-theme="dark">dark.css</a>
+  </div>
   <script>
   var preview = Docsify.dom.find('.demo-theme-preview');
   var themes = Docsify.dom.findAll('[rel="stylesheet"]');
